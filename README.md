@@ -1,5 +1,8 @@
 # higgsfield-go
 
+[![CI](https://github.com/alephbet-ai/higgsfield-go/actions/workflows/ci.yml/badge.svg)](https://github.com/alephbet-ai/higgsfield-go/actions/workflows/ci.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/alephbet-ai/higgsfield-go.svg)](https://pkg.go.dev/github.com/alephbet-ai/higgsfield-go)
+
 An idiomatic Go client for the [Higgsfield AI](https://higgsfield.ai) generation API.
 It is a Go port of the official [higgsfield-js](https://github.com/higgsfield-ai/higgsfield-js)
 SDK, covering the v2 `subscribe` flow and file uploads.
