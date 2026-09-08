@@ -288,10 +288,10 @@ follow-ups remain available if desired later:
 ### Model catalog
 
 The API has **no runtime models-discovery endpoint** — the OpenAPI spec exposes only
-`GET /requests/{id}/status` and `POST /requests/{id}/cancel` besides the ~26 per-model POST
-endpoints (`/higgsfield-ai/soul/standard`, `/higgsfield-ai/dop/{turbo,lite,standard}`,
-`/flux-pro/kontext/max/text-to-image`, `/veo3.1/*`, `/kling-video/*`, `/bytedance/seedance/*`,
-`/higgsfield-ai/popcorn/auto`, …). The dangling `ModelSchemasResponse` type in higgsfield-js is
+`GET /requests/{id}/status` and `POST /requests/{id}/cancel` besides the 48 per-model POST
+endpoints (`/higgsfield-ai/soul/standard`, `/nano-banana`, `/higgsfield-ai/dop/{turbo,lite,standard}`,
+`/flux-pro/kontext/max/text-to-image`, `/veo3.1/*`, `/sora-2/*`, `/kling-video/*`, `/minimax/hailuo-*`,
+`/reve/*`, `/wan-25-preview/*`, `/bytedance/seedance/*`, `/higgsfield-ai/popcorn/auto`). The dangling `ModelSchemasResponse` type in higgsfield-js is
 not backed by any live endpoint.
 
 Because the catalog is finite and versioned (it *is* the OpenAPI spec), models are exposed as a

@@ -146,10 +146,16 @@ case errors.Is(err, higgsfield.ErrPollTimeout):
 
 ## Models
 
-There is no runtime model-discovery endpoint; `Model` is an open string type with
-exported constants for the documented catalog (`ModelSoulStandard`, `ModelDoPTurbo`,
-`ModelFluxKontextMaxText2Image`, `ModelVeo31Image2Video`, `ModelKling*`, `ModelSeedance*`, …).
-Because the type is open, any endpoint string is also accepted.
+There is no runtime model-discovery endpoint. `Model` is an open string type with
+exported constants for the full documented catalog (48 endpoints) — Soul, DoP,
+Popcorn, Nano Banana, FLUX, Reve, Veo 3.1, Sora 2, Seedance, Kling, MiniMax Hailuo,
+and Wan. Enumerate them with `higgsfield.Models`. Because the type is open, any
+endpoint string is also accepted, so newly released models work without an SDK update:
+
+```go
+res, err := c.Subscribe(ctx, higgsfield.ModelNanoBanana, input)
+res, err = c.Subscribe(ctx, "/some/brand-new/model", input) // also fine
+```
 
 ## Status
 
