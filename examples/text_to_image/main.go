@@ -1,7 +1,8 @@
 // Command text_to_image demonstrates a basic text-to-image generation with the
 // higgsfield-go client.
 //
-// Set credentials first:
+// Create a key at https://cloud.higgsfield.ai/api-keys, then set credentials
+// first:
 //
 //	export HF_CREDENTIALS="YOUR_KEY_ID:YOUR_KEY_SECRET"
 //	go run ./examples/text_to_image

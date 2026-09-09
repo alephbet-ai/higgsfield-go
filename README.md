@@ -23,9 +23,22 @@ Requires Go 1.23+.
 
 ## Authentication
 
-Credentials are `KEY_ID:KEY_SECRET`. Provide them via options or the environment
-(resolved in this order): `HF_CREDENTIALS` or `HF_KEY` (`"KEY_ID:KEY_SECRET"`),
-then `HF_API_KEY_ID` + `HF_API_KEY_SECRET`, then legacy `HF_API_KEY` + `HF_API_SECRET`.
+Credentials are a `KEY_ID:KEY_SECRET` pair.
+
+### Getting your credentials
+
+1. Sign in to [Higgsfield Cloud](https://cloud.higgsfield.ai) (email, Google, Apple, or Microsoft).
+2. Open the [API keys](https://cloud.higgsfield.ai/api-keys) page.
+3. Create a new key. Copy the **key ID** and **key secret** — the secret is shown
+   only once, so store it somewhere safe.
+
+The client sends them as an `Authorization: Key KEY_ID:KEY_SECRET` header.
+
+### Providing them to the client
+
+Pass credentials via options or the environment (resolved in this order):
+`HF_CREDENTIALS` or `HF_KEY` (`"KEY_ID:KEY_SECRET"`), then `HF_API_KEY_ID` +
+`HF_API_KEY_SECRET`, then legacy `HF_API_KEY` + `HF_API_SECRET`.
 
 ```bash
 export HF_CREDENTIALS="YOUR_KEY_ID:YOUR_KEY_SECRET"
